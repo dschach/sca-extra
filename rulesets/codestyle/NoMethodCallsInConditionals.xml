@@ -26,11 +26,11 @@
 			<property name="xpath">
 				<value>
 					<![CDATA[
-					//IfBlockStatement[StandardCondition//MethodCallExpression]
-					| //SwitchStatement[StandardCondition//MethodCallExpression]
-					| //ForLoopStatement[StandardCondition//MethodCallExpression]
-					| //TernaryExpression[StandardCondition//MethodCallExpression]
-					| //ForEachStatement[MethodCallExpression]
+					//IfBlockStatement[StandardCondition//MethodCallExpression[not(starts-with(@MethodName,'is'))]]
+| //SwitchStatement[StandardCondition//MethodCallExpression[not(starts-with(@MethodName,'is'))]]
+| //ForLoopStatement[StandardCondition//MethodCallExpression[not(starts-with(@MethodName,'is'))]]
+| //TernaryExpression[StandardCondition//MethodCallExpression[not(starts-with(@MethodName,'is'))]]
+| //ForEachStatement[MethodCallExpression[not(starts-with(@MethodName,'is'))]]
 					]]>
 				</value>
 			</property>
